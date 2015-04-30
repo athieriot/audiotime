@@ -1,0 +1,14 @@
+web:
+  build: .dockerfiles/openresty
+  links:
+    - db:db
+  ports:
+    - "80:80"
+
+db:
+  build: .dockerfiles/postgres-trgm
+  volumes:
+    - "/docker-data/audiotime/postgresql/data:/var/lib/postgresql/data"
+  environment:
+    - POSTGRES_USER=audiotime
+    - POSTGRES_PASSWORD=audiotime
