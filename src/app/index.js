@@ -3,7 +3,14 @@
 import MainCtrl from './main/main.controller';
 import NavbarCtrl from '../components/navbar/navbar.controller';
 
-angular.module('audiotime', ['ngAnimate', 'ngSanitize', 'restangular', 'ui.router', 'mgcrea.ngStrap'])
+angular.module('app', [
+  'ngAnimate',
+  'ui.select',
+  'ngSanitize',
+  'restangular',
+  'ui.router',
+  'ui.bootstrap'
+])
   .controller('MainCtrl', MainCtrl)
   .controller('NavbarCtrl', NavbarCtrl)
 
